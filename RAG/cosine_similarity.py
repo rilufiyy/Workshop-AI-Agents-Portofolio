@@ -29,7 +29,7 @@ def cosine_similarity(vector1, vector2):
     return simalirity
 
 text1 = 'I love cat'
-text2 = 'I love cat'
+text2 = 'I love kitties'
 
 emb1 = get_embeddings(text1)
 emb2 = get_embeddings(text2)
@@ -37,4 +37,5 @@ emb2 = get_embeddings(text2)
 similarity = cosine_similarity(emb1, emb2)
 print(f'Text 1: {text1}')
 print(f'Text 2: {text2}')
+
 print(f'Cosine Similarity: {cosine_similarity}')
