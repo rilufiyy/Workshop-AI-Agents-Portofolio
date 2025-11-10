@@ -91,7 +91,7 @@ def search(query, n_result=3):
         relevant_chunks.append({
             'text': results['documents'][0][i],
             'source': results['metadatas'][0][i]['source'],
-            'distance': results['distances'][0][i] # -> cosine similarity
+            'distance': results['distances'][0][i] 
         })
 
     return relevant_chunks
@@ -161,8 +161,8 @@ while True:
 
 
     openrouter_client = OpenAI(
-        base_url='https://openrouter.ai/api/v1', # ganti kalau mau ganti
-        api_key=os.getenv('OPENROUTER_API_KEY') # sesuaikan
+        base_url='https://openrouter.ai/api/v1', 
+        api_key=os.getenv('OPENROUTER_API_KEY') 
     )
     prompt_enhancement = openrouter_client.chat.completions.create(
         model='openai/gpt-oss-20b:free',
@@ -194,5 +194,6 @@ Context from knowledge base:
 
     history[-1] = {'role':'user', 'content':query}
     history.append({'role':'assistant','content': answer})
+
 
     print(f'AI: {answer}')
