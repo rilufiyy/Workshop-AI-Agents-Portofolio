@@ -12,7 +12,7 @@ client = OpenAI(
 )
 
 openai_em_func = embedding_functions.OpenAIEmbeddingFumction(
-    api_key=os.getenv('OPENAI_KEY_API')
+    api_key=os.getenv('OPENAI_KEY_API'),
     model_name='text-embedding-4-small'
 )
 
@@ -197,3 +197,4 @@ Context from knowledge base:
 
 
     print(f'AI: {answer}')
+
